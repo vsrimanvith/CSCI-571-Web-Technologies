@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D503E58529EB714500953505 /* SplashscreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503E58429EB714500953505 /* SplashscreenView.swift */; };
+		D503E58729EB8BFF00953505 /* AutoSuggestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D503E58629EB8BFF00953505 /* AutoSuggestView.swift */; };
+		D52BFC8829EA803600A29755 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = D52BFC8729EA803600A29755 /* SwiftyJSON */; };
+		D54177F229E293B40020B79D /* ticketmasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54177F129E293B40020B79D /* ticketmasterApp.swift */; };
+		D54177F429E293B40020B79D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54177F329E293B40020B79D /* ContentView.swift */; };
+		D54177F629E293B50020B79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54177F529E293B50020B79D /* Assets.xcassets */; };
+		D54177F929E293B50020B79D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D54177F829E293B50020B79D /* Preview Assets.xcassets */; };
+		D541780429E36E720020B79D /* EventDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541780329E36E720020B79D /* EventDetailsView.swift */; };
+		D541780829E3E9030020B79D /* ArtistsTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541780729E3E9030020B79D /* ArtistsTeamView.swift */; };
+		D541780A29E4A99A0020B79D /* VenueDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D541780929E4A99A0020B79D /* VenueDetailsView.swift */; };
+		D59DE5EE29EE415900CBF8A3 /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = D59DE5ED29EE415900CBF8A3 /* SimpleToast */; };
+		D5A15D9B29E5ED3F0098B1A7 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D5A15D9A29E5ED3F0098B1A7 /* Alamofire */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D503E58429EB714500953505 /* SplashscreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashscreenView.swift; sourceTree = "<group>"; };
+		D503E58629EB8BFF00953505 /* AutoSuggestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoSuggestView.swift; sourceTree = "<group>"; };
+		D54177EE29E293B40020B79D /* ticketmaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ticketmaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D54177F129E293B40020B79D /* ticketmasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ticketmasterApp.swift; sourceTree = "<group>"; };
+		D54177F329E293B40020B79D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D54177F529E293B50020B79D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D54177F829E293B50020B79D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D541780329E36E720020B79D /* EventDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsView.swift; sourceTree = "<group>"; };
+		D541780729E3E9030020B79D /* ArtistsTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsTeamView.swift; sourceTree = "<group>"; };
+		D541780929E4A99A0020B79D /* VenueDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D54177EB29E293B40020B79D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D52BFC8829EA803600A29755 /* SwiftyJSON in Frameworks */,
+				D59DE5EE29EE415900CBF8A3 /* SimpleToast in Frameworks */,
+				D5A15D9B29E5ED3F0098B1A7 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D54177E529E293B40020B79D = {
+			isa = PBXGroup;
+			children = (
+				D54177F029E293B40020B79D /* ticketmaster */,
+				D54177EF29E293B40020B79D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D54177EF29E293B40020B79D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D54177EE29E293B40020B79D /* ticketmaster.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D54177F029E293B40020B79D /* ticketmaster */ = {
+			isa = PBXGroup;
+			children = (
+				D54177F129E293B40020B79D /* ticketmasterApp.swift */,
+				D54177F329E293B40020B79D /* ContentView.swift */,
+				D54177F529E293B50020B79D /* Assets.xcassets */,
+				D54177F729E293B50020B79D /* Preview Content */,
+				D541780329E36E720020B79D /* EventDetailsView.swift */,
+				D541780729E3E9030020B79D /* ArtistsTeamView.swift */,
+				D541780929E4A99A0020B79D /* VenueDetailsView.swift */,
+				D503E58429EB714500953505 /* SplashscreenView.swift */,
+				D503E58629EB8BFF00953505 /* AutoSuggestView.swift */,
+			);
+			path = ticketmaster;
+			sourceTree = "<group>";
+		};
+		D54177F729E293B50020B79D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D54177F829E293B50020B79D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D54177ED29E293B40020B79D /* ticketmaster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D54177FC29E293B50020B79D /* Build configuration list for PBXNativeTarget "ticketmaster" */;
+			buildPhases = (
+				D54177EA29E293B40020B79D /* Sources */,
+				D54177EB29E293B40020B79D /* Frameworks */,
+				D54177EC29E293B40020B79D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ticketmaster;
+			packageProductDependencies = (
+				D5A15D9A29E5ED3F0098B1A7 /* Alamofire */,
+				D52BFC8729EA803600A29755 /* SwiftyJSON */,
+				D59DE5ED29EE415900CBF8A3 /* SimpleToast */,
+			);
+			productName = ticketmaster;
+			productReference = D54177EE29E293B40020B79D /* ticketmaster.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D54177E629E293B40020B79D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D54177ED29E293B40020B79D = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = D54177E929E293B40020B79D /* Build configuration list for PBXProject "ticketmaster" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D54177E529E293B40020B79D;
+			packageReferences = (
+				D5A15D9929E5ED3F0098B1A7 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D52BFC8629EA803600A29755 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				D59DE5EC29EE415900CBF8A3 /* XCRemoteSwiftPackageReference "SimpleToast" */,
+			);
+			productRefGroup = D54177EF29E293B40020B79D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D54177ED29E293B40020B79D /* ticketmaster */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D54177EC29E293B40020B79D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D54177F929E293B50020B79D /* Preview Assets.xcassets in Resources */,
+				D54177F629E293B50020B79D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D54177EA29E293B40020B79D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D541780829E3E9030020B79D /* ArtistsTeamView.swift in Sources */,
+				D54177F429E293B40020B79D /* ContentView.swift in Sources */,
+				D541780A29E4A99A0020B79D /* VenueDetailsView.swift in Sources */,
+				D541780429E36E720020B79D /* EventDetailsView.swift in Sources */,
+				D54177F229E293B40020B79D /* ticketmasterApp.swift in Sources */,
+				D503E58529EB714500953505 /* SplashscreenView.swift in Sources */,
+				D503E58729EB8BFF00953505 /* AutoSuggestView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D54177FA29E293B50020B79D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D54177FB29E293B50020B79D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D54177FD29E293B50020B79D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ticketmaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RT8YQTK78;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ticketmaster.ticketmaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D54177FE29E293B50020B79D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ticketmaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 5RT8YQTK78;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ticketmaster.ticketmaster;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D54177E929E293B40020B79D /* Build configuration list for PBXProject "ticketmaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D54177FA29E293B50020B79D /* Debug */,
+				D54177FB29E293B50020B79D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D54177FC29E293B50020B79D /* Build configuration list for PBXNativeTarget "ticketmaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D54177FD29E293B50020B79D /* Debug */,
+				D54177FE29E293B50020B79D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D52BFC8629EA803600A29755 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		D59DE5EC29EE415900CBF8A3 /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.7.1;
+			};
+		};
+		D5A15D9929E5ED3F0098B1A7 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D52BFC8729EA803600A29755 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D52BFC8629EA803600A29755 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		D59DE5ED29EE415900CBF8A3 /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D59DE5EC29EE415900CBF8A3 /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
+		};
+		D5A15D9A29E5ED3F0098B1A7 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D5A15D9929E5ED3F0098B1A7 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D54177E629E293B40020B79D /* Project object */;
+}

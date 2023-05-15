@@ -1,0 +1,56 @@
+<br><br><br><br><br>
+<div class="container" id="searchcomp" >
+  <div class="form-card col-md-12 p-3 ">
+    <h1 class="text-center pt-5 pb-4"><b>Events Search</b></h1>
+      <form [formGroup]="searchdataForm" (ngSubmit)="submit_form()" ngNativeValidate >
+          <label for="keyword" class="form-label pt-2">Keyword</label><span class="required"> *</span> 
+          <div class="input-group" required="required">
+            <input matInput appearence = "outline" [formControl]="autokey" [(ngModel)]="keyword" class="form-control" [matAutocomplete]="auto" style="border-radius: 7px;" required>
+            <mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelected()" [displayWith]="displayWith">
+              <mat-option *ngIf="isLoading" class="is-loading"><mat-spinner diameter="20" color="primary"></mat-spinner></mat-option>
+              <ng-container *ngIf="!isLoading">
+                <mat-option *ngFor="let item of options" [value]="item">
+                  <span>{{item}}</span>
+                </mat-option>
+              </ng-container>
+            </mat-autocomplete>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-6 mt-3">
+              <label for="distance" class="form-label">Distance</label>
+              <input formControlName="distance" type="number" min="0" name="dist" class="form-control" id="distance" placeholder="10" value="10">
+            </div>
+      
+            <div class="col-md-6 mt-3">
+              <label for="category" class="form-label">Category</label><span class="required"> *</span><br>
+              <select id="cat" class="form-control form-select w-75" name="category" formControlName="category" required>
+                <option value="default">Default</option>
+                <option value="music">Music</option>
+                <option value="sports">Sports</option>
+                <option value="arts">Arts & Theatre</option>
+                <option value="film">Film</option>
+                <option value="miscellaneous">Miscellaneous</option>
+              </select> 
+            </div>
+          </div>
+  
+          <label for="location" class="form-label mt-3">Location</label><span class="required"> *</span>
+          <input formControlName="location" type="text" name="loc" class="form-control" id="location" required/>
+         
+          <div class="mt-3">
+            <input formControlName="checkbox_" class="form-check-input" id="check" type="checkbox" name="check"> 
+            <label for="check" class="form-check-label">&nbsp;&nbsp;Auto-detect your location</label>
+          </div>
+
+          <div class="col-md-12 mt-3 mb-5" style="text-align: center;">
+            <button type="submit" class="btn btn-danger btn-submit" style="margin-right: 15px;">SUBMIT</button>
+            <button type="button" class="btn btn-primary" (click)="form_fields_clear()">CLEAR</button>
+          </div>
+      </form>
+  </div>
+</div>
+  
+ <app-eventstable [events]="responseData" (callEventsDetails)="callEventsDetails($event)" (callVenueDetails)="callVenueDetails($event)" *ngIf="table"></app-eventstable>
+ <app-eventscard [event_id]="id" [venue_name]="venue_name" (togglecomps)="togglecomps()" *ngIf="eventscard" style="display: flex;"></app-eventscard>

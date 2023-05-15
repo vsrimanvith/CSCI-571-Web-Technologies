@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+body
+{
+    background: url('/assets/background.jpg') no-repeat center center fixed; 
+    height: 100%;
+    background-size: cover;
+}
+
+html, body 
+{ 
+    height: 100%; 
+}
+
+body 
+{ 
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+html, body{
+    height: 100%; 
+}
+
+body{
+    margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+.mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label{
+    color: white !important;
+}
+
+.mat-mdc-tab:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled) .mdc-tab-indicator__content--underline{
+    border-color: rgb(34, 34, 233);
+}
+
+div.mat-mdc-tab-labels{
+    background-color: rgb(0 225 165 / 0.53);
+}
+
+.mat-mdc-tab .mdc-tab__text-label, .mat-mdc-tab-link .mdc-tab__text-label{
+    color: white !important;
+}
+   
+span.mdc-tab__text-label{
+    color: white !important;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #1b62db !important;
+}

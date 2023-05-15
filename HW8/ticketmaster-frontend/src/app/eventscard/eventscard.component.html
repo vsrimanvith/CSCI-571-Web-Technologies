@@ -1,0 +1,212 @@
+<div class="form-card container mt-5 mb-5 col-md-7" id="eventcomp">
+  <div class="mt-1 pt-3">
+    <p>
+      <mat-icon style="color: white;">keyboard_arrow_left</mat-icon><a (click)="back_function()" style="color: white;border-bottom: 1px solid white;cursor: pointer;font-family: 'Lato';">Back</a>
+    </p>
+  </div>
+  <div class="mt-3 mb-3" style="text-align: center; color: white;">
+    <p class="titleevent">{{this.event_title}} &nbsp;&nbsp;<span style="text-decoration: none;cursor: pointer;">
+      <mat-icon class="favorite_border" (click)="changeIconFillColor(this.date,this.event_title,this.genres_string,this.venue)" *ngIf="!fav_status" color="black">favorite_border</mat-icon>
+      <mat-icon class="favorite_fill" (click)="changeIconFillColor(this.date,this.event_title,this.genres_string,this.venue)" *ngIf="fav_status" color="red">favorite</mat-icon>
+    </span></p>
+  </div>
+
+  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" dynamicHeight>
+    <mat-tab label="Events" style="color: white;"> 
+      <div class="row justify-content-center align-items-center mt-3 mb-3">
+        <div class="col-md-5 p-4 col-sm-12 " style="text-align: center;font-family: 'Lato';">
+          <div *ngIf="date!==''">
+            <h5 class="pb-0 mb-0">Date</h5>
+            <p class="pt-0">{{this.date}}</p>
+          </div>
+
+            <h5 class="pb-0 mb-0" *ngIf="artists_team_string.length>0">Artist/Team</h5>
+            <p class="pb-0 ">{{this.artists_team_string}}</p>
+
+            <h5  class="pb-0 mb-0" *ngIf="venue!==''">Venue</h5>
+            <p class="pb-0 ">{{this.venue}}</p>
+
+            <h5  class="pb-0 mb-0" *ngIf="genres_string!==''">Genres</h5>
+            <p class="pb-0 ">{{this.genres_string}}</p>
+
+            <h5 class="pb-0 mb-0" *ngIf="priceranges_string!==''">Price Ranges</h5>
+            <p class="pb-0">{{this.priceranges_string}}</p>
+
+            <h5 class="pb-0 mb-1" *ngIf="ticket_status!=''">Ticket Status</h5>
+            <span class="pb-1 pt-1 ps-1 pe-1 mt-3 mb-1" [style.background-color]="bgcolor" [style.border-radius]="'7px'" [style.color]="'white'">{{ticket_status}}</span>
+            
+
+            <h5 class="pb-0 mb-0 mt-3">Buy Ticket At</h5>
+            <p *ngIf="ticketmasterurl!==''"><a href="{{this.ticketmasterurl}}" target="_blank" style="color: #2196f3;">Ticketmaster</a></p>
+            <p *ngIf="ticketmasterurl==''">Ticketmaster</p>
+        </div>
+
+        <div class="col-md-7 img-fluid" style="text-align: center;vertical-align: middle;">
+          <img src="{{this.seatmapurl}}" class="align-items-center" width="360px">
+        </div>
+        <div class="mb-3" style="text-align: center;color: white;">
+          <p style="font-size: 18px;">Share on: &nbsp;&nbsp;
+            <a href="{{twitterurl}}" target="_blank"> <i class="fa fa-twitter fa-2x" style="color: #55acee;"></i> </a>
+              &nbsp;
+            <a  href="{{fburl}}" target="_blank"><i class="fa fa-facebook-square fa-2x" style="color: #0d6efd;"></i></a></p>
+        </div>
+      </div>
+    </mat-tab>
+
+
+
+    <mat-tab label="Artist/Teams"> 
+      <div id="carouselExampleControls" class="carousel slide mt-3" data-ride="carousel" *ngIf="music_artists.length>0">
+        <div class="row" style="font-family: 'Lato';">
+          <div class="col-md-1">
+            <div *ngIf="music_artists.length>1">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+          </div>
+          </div>
+          <div class="col-md-10" id="rightdiv">
+            <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let artist of artists; let i = index" [ngClass]="{'active': i == 0}">
+                  <div class="row">
+                    <div class="col-md-3" style="text-align: center;">
+                      <div class="row mb-1" style="display: block;"><img class="rounded-circle" src="{{artist.artist.images[0].url}}"> </div>
+                      <h5 style="color: aquamarine;">{{ artist.artist.name }}</h5>
+                    </div>
+
+                    <div class="col-md-9" style="margin: auto;">
+                      <div class="row" style="text-align: center;">
+                      <div class="col-md-4">
+                        <h5>Popularity</h5>
+                        <div class="spinner-container" style="text-align: center;display: inline-block;">
+                          <div class="spinner-background">{{artist.artist['popularity']}}</div>
+                          <mat-progress-spinner #spinner
+                              color="warn"
+                              mode="determinate"
+                              value="{{artist.artist['popularity']}}"
+                              diameter="40">
+                          </mat-progress-spinner>
+                      </div>
+                    </div>
+
+                      <div class="col-md-4">
+                        <h5>Followers</h5>
+                        <p style="color: white;">{{artist.artist['followers']['total']}}</p>
+                      </div>
+
+                      <div class="col-md-3">
+                        <h5>Spotify Link</h5>
+                        <a href="{{artist.artist['external_urls']['spotify']}}" target="_blank"><i class='fa fa-spotify fa-2x' style="color:rgb(7, 170, 89)"></i></a>
+                      </div>
+                      
+                    </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-10 px-3 pt-2 pb-2">
+                    <h6><b>Album featuring {{artist.artist.name}}</b></h6>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="row" style="text-align: center;margin: auto;">
+                      <div class="col-md-4 pb-3" *ngIf="artist.albums.length>0">
+                        <img class="img-fluid" src="{{artist.albums[0].image}}" width="200px" >
+                      </div>
+                      <div class="col-md-4 pb-3" *ngIf="artist.albums.length>1">
+                        <img class="img-fluid" src="{{artist.albums[1].image}}" width="200px">
+                      </div>
+                      <div class="col-md-4 pb-3" *ngIf="artist.albums.length>2">
+                        <img class="img-fluid" src="{{artist.albums[2].image}}" width="200px">
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-1">
+            <div *ngIf="music_artists.length>1">
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          </div>
+      </div>
+    </div>
+    <div class="container col-md-9 mt-5 mb-5">
+      <h5 class="mt-5" style="color: red;background-color: white;border-radius: 20px;text-align: center;font-size: 16px;" *ngIf="music_artists.length==0">No music related artist details to show</h5>
+    </div>
+    </mat-tab>
+
+
+    <mat-tab label="Venue">
+      <div class="row mt-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 p-3" style="text-align: center;">
+            <h5 *ngIf="venue_name_data!==''">Name</h5>
+            <p>{{this.venue_name_data}}</p>
+
+            <h5 *ngIf="venue_address!==''">Address</h5>
+            <p>{{this.venue_address}}</p>
+
+            <h5 *ngIf="venue_phone!==''">Phone Number</h5>
+            <p>{{this.venue_phone}}</p>
+        </div>
+            
+        <div class="col-md-6" style="text-align: center;">
+          <div *ngIf="open_hours!==''" style="margin-top: 5px;">
+            <h5>Open Hours</h5>
+              <span class="text" [class.collapsed]="isCollapsedopenhrs">{{this.open_hours}}</span>
+              <button class="btn btn-link show-more" (click)="toggleTextOpenhours()" style="color: #2196f3;">{{ buttonTextOpenhours }}<mat-icon *ngIf="isCollapsedopenhrs" style="color: white;">keyboard_arrow_up</mat-icon>
+              <mat-icon *ngIf="!isCollapsedopenhrs" style="color: white;">keyboard_arrow_down</mat-icon></button>
+          </div>
+
+          <div *ngIf="general_rule!==''" style="margin-top: 5px;">
+            <h5>General Rule</h5>
+            <span class="text" [class.collapsed]="isCollapsedgeneralrule">{{this.general_rule}}</span>
+            <button class="btn btn-link show-more" (click)="toggleTextGeneralrule()" style="color: #2196f3;">{{ buttonTextGeneralrule }}<mat-icon *ngIf="isCollapsedgeneralrule" style="color: white;">keyboard_arrow_up</mat-icon>
+            <mat-icon *ngIf="!isCollapsedgeneralrule" style="color: white;">keyboard_arrow_down</mat-icon></button>
+          </div>
+
+          <div *ngIf="child_rule!==''" style="margin-top: 5px;">
+            <h5>Child Rule</h5>
+            <span class="text" [class.collapsed]="isCollapsedchildrule">{{this.child_rule}}</span>
+            <button class="btn btn-link show-more" (click)="toggleTextChildrule()" style="color: #2196f3;">{{ buttonTextChildrule }}<mat-icon *ngIf="isCollapsedchildrule" style="color: white;">keyboard_arrow_up</mat-icon>
+              <mat-icon *ngIf="!isCollapsedchildrule" style="color: white;">keyboard_arrow_down</mat-icon></button>
+          </div>
+
+        </div>
+        <div class="col-md-12 mb-5 mt-3" style="text-align: center;">
+            <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" *ngIf="marker.position.lat!==0 && marker.position.long!==0">
+            Show venue on Google map
+        </button>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header" style="padding-bottom: 10px;">
+              <h4 class="modal-title mb-1" id="exampleModalLabel">Event Venue</h4>
+          </div>
+          <div class="modal-body">
+            <div class="my-google-map">
+              <div id="map" style="width:100%; height:400px;">
+                <google-map [options]="mapOptions" width="100%" height="400px">
+                  <map-marker [position]="marker.position"></map-marker>
+                </google-map>
+              </div>
+            </div>
+          </div>
+          
+          <div class="modal-footer" style="display: block;">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="rclose"
+                  style="color:white; background-color: black;">Close</button>
+          </div>
+      </div>
+  </div>
+</div>

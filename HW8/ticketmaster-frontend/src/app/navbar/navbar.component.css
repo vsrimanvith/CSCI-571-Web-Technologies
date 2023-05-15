@@ -1,0 +1,11 @@
+.active {
+    border: 2px solid white;
+    border-radius: 15px;
+}
+.navclass{
+    color: white;
+}
+
+.navbar{
+    float: right;
+}

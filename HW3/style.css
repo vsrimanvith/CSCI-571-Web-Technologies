@@ -1,0 +1,118 @@
+/* 
+Name: Sri Manvith Vaddeboyina
+USC ID: 1231409457
+Web Technologies Assignment-3
+*/
+
+
+/* CSS file */
+
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    object-fit: cover;
+}
+
+body{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+    font-style: italic;
+  }
+
+li{
+    display: inline;
+}
+
+/* Header Nav Area */
+
+.myheader{
+    width: 1200px;
+    margin: 0px auto 0px auto;
+}
+
+.home-title{
+    width: 870px;
+    border: 1.5px black solid;
+    margin: 45px auto 20px auto;
+    text-align: center;
+}
+
+.home-title-name{
+    margin: 20px 0px 10px 0px;
+    font-size: 65px;
+}
+
+.nav-options{
+    margin: 0px 0px 30px 0px;
+    color: grey;
+}
+
+.nav-options li{
+    margin: 0px 20px 0px 0px;
+}
+
+
+/* Images Area */
+
+.imgs-home{
+    margin: 105px auto 0px auto;
+    width: 1150px;
+    text-align: center;
+}
+
+.imgs-home img{
+    width: 480px;
+    height: 480px;
+    padding: 2.5px 2.5px 2.5px 2.5px;
+    object-fit: cover;
+    text-align: center;
+}
+
+.imgs-home-nature{
+    margin: 60px auto 0px  auto;
+    width: 1150px;
+    text-align: center;
+}
+
+.imgs-home-nature p{
+    font-size: 35px;
+    margin: 0px 0px 10px 90px;
+    text-align: left;
+}
+
+.imgs-home-nature img{
+    width: 480px;
+    height: 480px;
+    padding: 2.5px 2.5px 2.5px 2.5px;
+    text-align: center;
+}
+
+
+
+/* Footer Area */
+
+.myfooter {
+    width: 1150px;
+    margin: 40px auto 0px auto;
+}
+.footer-text{
+    text-align: center;
+    font-size: 15px;
+}
+.footer-social-imgs{
+    text-align: center;
+    margin: 0px 28px 45px 0px;
+}
+
+.icon{
+    width: 28px;
+    height: 28px;
+    margin: -15px 0px 0px 30px;
+}

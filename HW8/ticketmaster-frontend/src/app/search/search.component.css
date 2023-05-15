@@ -1,0 +1,28 @@
+.form-card {
+    color: rgb(132, 211, 238);
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+}
+
+.text-center{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: 200;
+    border-bottom: 1px white solid;
+}
+
+.required{
+    color: red;
+}
+
+label
+{
+  font-size: 17px;
+}
+
+#searchcomp{
+  max-width: 600px !important;
+}

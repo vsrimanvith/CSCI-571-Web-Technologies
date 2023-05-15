@@ -1,0 +1,46 @@
+@use '@angular/material' as mat;
+@import '@angular/material/theming';
+@include mat.core();
+
+
+$ticketmaster-frontend-primary: mat.define-palette($mat-blue);
+$ticketmaster-frontend-accent: mat.define-palette($mat-pink, A200, A100, A400);
+$ticketmaster-frontend-warn: mat.define-palette(mat.$red-palette);
+
+$ticketmaster-frontend-theme: mat.define-light-theme((
+  color: (
+    primary: $ticketmaster-frontend-primary,
+    accent: $ticketmaster-frontend-accent,
+    warn: $ticketmaster-frontend-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+@function ticketmaster-frontend-light-theme-foreground($color) {
+  @return (
+  base: $color,
+   divider:  rgba($color, 0.38),
+  dividers: rgba($color, 0.38),
+  disabled: rgba($color, 0.38),
+   disabled-button:  rgba($color, 0.38),
+   disabled-text:  rgba($color, 0.38),
+   hint-text:  rgba($color, 0.38),
+  secondary-text:rgba($color, 0.54),
+   icon: rgba($color, 0.54),
+  icons:  rgba($color, 0.54),
+  text: rgba($color, 0.87),
+  slider-off: rgba($color, 0.26),
+  slider-off-active: rgba($color, 0.38),
+  slider-min: rgba($color, 0.38)
+  );
+  };
+  
+  $white-foreground: ticketmaster-frontend-light-theme-foreground(white);
+  $my-ticketmaster-frontend-theme-custom: map-merge($ticketmaster-frontend-theme, (foreground: $white-foreground));
+
+
+@include mat.all-component-themes($ticketmaster-frontend-theme);
+
+
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Events Search</title>
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <script src = "/static/app.js" charset="utf-8"></script>    
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.cdnfonts.com/css/merriweather" rel="stylesheet">
+    </head>
+
+    <body>
+      <div class="form-card">
+        <p class="title">Events Search</p>
+        <form id="form1" onSubmit="return false" autocomplete="off">
+          <label for="keyword">Keyword</label><span class = "required">*</span><br>
+          <input type="text" id="keyword" name="keyword" required><br>
+
+          <div class="horizontal">
+            <div class="distance">
+                <label for="dist">Distance(miles)</label><br>
+                <input type="number" min="0" id="distance" name="distance" value="" placeholder="10" >
+            </div>
+            
+            <div class="category">
+              <label for="cat">Category</label><span class = "required">*</span><br>
+              <select id="cat" name="category">
+                  <option value="default">Default</option>
+                  <option value="music">Music</option>
+                  <option value="sports">Sports</option>
+                  <option value="arts">Arts & Theatre</option>
+                  <option value="film">Film</option>
+                  <option value="miscellaneous">Miscellaneous</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="location">Location</label><span class = "required">*</span>&nbsp;&nbsp; 
+          <input type="checkbox" id="check" name="check" onclick="hide_location_box()"><span style="color: rgb(239, 238, 238);">Auto-Detect Location</span><br>
+          <input type="text" id="location" name="location" required>
+          <input id="button" type="submit" class="button-3d-1"  value="SEARCH" type="button" onclick="form_data_submit();"></input> &nbsp;&nbsp;
+          <input id="button" class="button-3d-2"  value="CLEAR" type="button" onclick="reset_form_fields(event);"></input><br><br>
+        </form>
+      </div> 
+
+      <table id="events-table1">
+        <thead id="thead1"></thead>
+        <tbody id = "display-data1"></tbody>
+      </table>
+
+      <table id="events-table">
+        <thead id="thead"></thead>
+        <tbody id = "display-data"></tbody>
+      </table>
+
+      <div id="event-card">
+      <div>
+        <div id="event-title">
+          <p id = "event-title"></p>
+        </div>
+        <div style="display: flex;padding-top: 40px;padding-bottom: 10px;">
+          <div id="eventsdata">
+            
+            <h3 id="date-time-title">Date</h3>
+            <p id="date-time"></p>
+          
+            <h3 id="artist-team-title">Artist/Team</h3>
+            <p id="artist-team"></p>
+            
+            <h3 id="venue-title">Venue</h3>
+            <p id="venue"></p>
+
+            <h3 id="genre-title">Genres</h3>
+            <p id="genre">Genre</p>
+
+            <h3 id="price-title">Price Ranges</h3>
+            <p id="price"></p>
+
+            <h3 id="ticket-status-title">Ticket Status</h3>
+            <p id="ticket-status"></p>
+
+            <h3 id="buy-ticket-at-title">Buy Ticket At</h3>
+            <a id="buy-ticket-at" target="_blank">Ticketmaster</a>
+          </div>
+
+          <div id="seat-map-div">
+            <img id="seat-map">
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      <div id="arrowcard">
+          <p id="temp-h3size"> Show Venue Details</p>
+          <div id="venue-det">
+            <a  class="arrow down" id="arrow-button" onclick="venue_details();"></a>
+          </div>
+      </div>
+       
+      <div id = "venue-card">
+        
+        <div id="venue-card-det"></div>
+        <span id = "venue-card-title"></span>
+        <div id="venue-1">
+          <img id="venue-card-image">
+        </div>
+        <div style="display: flex;">
+        <div id = "left">
+          <div id="top">
+            <div id = "left-address">
+              <b>Address:</b>
+            </div>
+          
+            <div id = "left-details">
+              <span id="address"></span><br>
+              <span id="city"></span>, <span id="state-code"></span><br>
+              <span id="postal-code"></span> <br>
+            </div>
+          </div>
+
+          <div id="bottom">       
+            <a id="google-maps" target="_blank">Open in Google Maps</a>
+          </div>
+        </div>
+
+        <div id = "right" >
+          <a id="more-events" target="_blank">More events at this venue</a>   
+        </div>
+      </div>
+    </div>
+
+    </body>
+
+</html>
