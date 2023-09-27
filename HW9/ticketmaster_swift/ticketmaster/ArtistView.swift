@@ -1,10 +1,3 @@
-//
-//  ArtistView.swift
-//  EventFinder
-//
-//  Created by rishi nareddy on 12/04/23.
-//
-
 import SwiftUI
 
 struct ArtistView: View {
